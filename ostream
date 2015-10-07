@@ -1,0 +1,18 @@
+#include<iostream.h>
+#include<fstream.h>
+#include<stdlib.h>
+
+int main(void)
+{
+	fstream out;
+	out.open("f1.txt",ios::out);
+	if(!out)
+	{
+		cerr<<"f1.txt can't open.\n";
+		abort();
+	}
+	out<<"this is a string.\n";
+	out<<"this is a program.\n";
+	out<<"ok!\n";
+	out.close();
+}
